@@ -1,0 +1,20 @@
+.imagem-redonda {
+    border-radius: 25%; 
+    object-fit: cover;
+}
+.videoPlayer {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    width: 50%;
+    max-width: 50%; /* Torna o elemento responsivo para telas menores */
+    height: auto; /* Ajusta a altura automaticamente */
+    margin-top: 20px;
+    padding: 20px; /* Espaço interno para evitar contato direto com as bordas */
+    box-sizing: border-box;
+}
+
+video {
+    max-width: 100%;
+    height: auto; /* Garante que o vídeo se ajuste à largura */
+}

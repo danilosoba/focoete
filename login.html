@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <!-- basic -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Webiste oficial do Foco ETE</title>
+  <!-- bootstrap css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <!-- style css -->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+  <!-- header section start-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="logo" href="index.html"><img src="images/logo (3).png" width="195" height="300"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+        <li class="nav-item"><a class="nav-link" href="aprendizagem.html">APRENDIZAGEM</a></li>
+        <li class="nav-item"><a class="nav-link" href="localizacao.html">LOCALIZAÇÃO</a></li>
+        <li class="nav-item"><a class="nav-link" href="equipe.html">EQUIPE</a></li>
+      </ul>
+    </div>
+    <div class="login_text"><a href="cadastre.html">CADASTRO</a></div>
+    <div class="login_text"><a href="login.html">LOGIN</a></div>
+  </nav>
+  <!-- header section end-->
+
+  <!-- login section start-->
+  <div class="services_section">
+    <div class="container">
+      <h1 class="services_text">LOGIN</h1>
+    </div>
+  </div>
+  <div class="login_section">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+          <div class="card card-signin my-5">
+            <div class="card-body">
+              <h5 class="card-title text-center">Entrar</h5>
+              <form class="form-signin" id="loginForm" >
+                <div class="form-label-group">
+                  <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                  <label for="inputEmail">Email</label>
+                </div>
+
+                <div class="form-label-group">
+                  <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                  <label for="inputPassword">Senha</label>
+                </div>
+
+                <button class="btn btn-lg btn-primary btn-block text-uppercase"  type="submit">Entrar</button>
+                <hr class="my-4">
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- login section end-->
+
+  <!-- footer section start-->
+  <div class="footer_section layout_padding"></div>
+  <!-- footer section end-->
+
+  <!-- copyright section start-->
+  <div class="copyright_section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <p class="copyright_text">Todos direitos reservados ao FOCOETE @2024</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- copyright section end-->
+
+  <!-- Javascript files-->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <!-- Firebase App (modular SDK) -->
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+  import { getFirestore, collection, getDocs, query, where } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js";
+
+  // Configuração do Firebase
+  const firebaseConfig = {
+    apiKey: "AIzaSyAy0BwZtyZ189J6V0bg_uUimMB_UsjtOFk",
+    authDomain: "focoete-2ca12.firebaseapp.com",
+    projectId: "focoete-2ca12",
+    storageBucket: "focoete-2ca12.appspot.com",
+    messagingSenderId: "368875947131",
+    appId: "1:368875947131:web:51066e6fd2a94ad872cede",
+    measurementId: "G-FTE8CPZ30E"
+  };
+
+  // Inicializar Firebase
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  // Tornar db globalmente acessível
+  window.db = db;
+  window.getDocs = getDocs;
+  window.collection = collection;
+  window.query = query;
+  window.where = where;
+</script>
+
+  <script type="module" src="js/login.js"></script>
+ <!-- Adicionando o arquivo JS separado -->
+</body>
+
+</html>
